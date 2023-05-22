@@ -55,9 +55,33 @@ inv = tuple(reversed (tupla))
 print (inv)
 
 # esta funcion me cuesta...
-#def intercambiarTupla(Tuple):
- #   lista = list(Tuple)
-  #  ult = len(lista)
+def intercambiarTupla(Tuple):
+    lista = list(Tuple)
+    lista [0], lista [-1] = lista [-1], lista [0]
+    Tuple2 = tuple(lista)
+    return Tuple2
+
+tuplaInit = (1,2,3,4)
+result = intercambiarTupla(tuplaInit)
+print (result)
+
+#Ejercicio tupla de listas pares e impares
+def encontrar_pares_impares (tupla):
+    listaPar = []
+    listaImpar = []
+    listaGral = list(tupla)
+    for i in listaGral:
+        if (i == 0):
+            listaPar.append(i)
+        elif (i % 2 == 0):
+            listaPar.append(i)
+        else:
+            listaImpar.append(i)
+    tuplaListas = listaPar, listaImpar
+    return tuplaListas
+miTupla = (2,3,4, 5,6,7,9,11,20)
+result2 = encontrar_pares_impares (miTupla)
+print (result2)
 
 # Ejercicio 2 (guía sobre tuplas)
 tuplaV = (3,5,6,7,2,3,5,5,2)
